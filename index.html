@@ -125,7 +125,7 @@
   .hero-meta span b{color:#f2f0e8; font-weight:600;}
 
   /* ===================== SLIDE 9 — THANK YOU ===================== */
-  #slide-9{
+  #slide-8{
     background:
       repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 14px),
       linear-gradient(160deg,#1c2733 0%, var(--steel) 55%, #34495e 100%);
@@ -144,7 +144,7 @@
   }
   .thanks-wrap .s-subtitle{color:#c9d2da; text-align:center;}
 
-  /* ===================== SLIDE 1 — COMPARE ===================== */
+  /* ===================== SLIDE 2 — COMPARE ===================== */
   .compare-center{flex:1; display:flex; align-items:center;}
   .compare-wrap{
     width:100%;
@@ -169,7 +169,7 @@
   table.compare tbody td.new{color:#2f5a3c; font-weight:600;}
   table.compare tbody td.new::before{content:"✓ "; color:var(--green);}
 
-  /* ===================== SLIDE 2 — BENEFITS ===================== */
+  /* ===================== SLIDE 3 — BENEFITS ===================== */
   .benefits2-grid{
     display:grid; grid-template-columns:repeat(5,1fr); gap:26px; flex:1; align-content:center;
   }
@@ -208,7 +208,7 @@
   }
   .benefit2-card.spotlight .benefit2-icon{background:var(--amber); color:#fff;}
 
-  /* ===================== SLIDE 3 — FEATURES / ARCHITECTURE ===================== */
+  /* ===================== SLIDE 4 — FEATURES / ARCHITECTURE ===================== */
   .arch-wrap{flex:1; display:flex; align-items:stretch; gap:130px; position:relative;}
   .arch-svg{position:absolute; inset:0; width:100%; height:100%; z-index:-1; overflow:visible;}
   .arch-svg path{stroke:var(--amber-dark); stroke-width:2; fill:none; opacity:.6; stroke-dasharray:1;}
@@ -255,8 +255,20 @@
   .feat-card.secondary .fi-icon{background:#e4e8e0; color:var(--steel-2);}
   .fi-text{font-size:26px; font-weight:500; color:var(--ink); line-height:1.3;}
 
-  /* ===================== SLIDE 4 — WORKFLOW ===================== */
+  /* ===================== SLIDE 5 — WORKFLOW ===================== */
   .wf-wrap{flex:1; display:flex; flex-direction:column; justify-content:center; gap:76px;}
+  .corner-example-btn{
+    margin-left:auto; width:52px; height:52px; display:flex; align-items:center; justify-content:center;
+    font-size:24px; color:var(--amber-dark); background:#fff2e0; border:2px solid var(--amber);
+    border-radius:50%; cursor:pointer; transition:.2s; align-self:center;
+  }
+  .corner-example-btn:hover{background:var(--amber); transform:scale(1.08);}
+  .price-example-panel{
+    background:var(--panel); border-radius:22px; padding:50px 60px; max-width:92%; max-height:88vh;
+    overflow-y:auto; box-shadow:0 30px 70px rgba(0,0,0,.4);
+  }
+  .price-example-head{display:flex; align-items:baseline; gap:18px; margin-bottom:8px;}
+  .price-example-head h2{font-family:var(--serif); font-size:44px; font-weight:600; margin:0; color:var(--ink);}
   .wf-lane-label{
     display:flex; align-items:center; gap:16px; margin-bottom:44px;
     font-family:var(--mono); font-size:22px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
@@ -316,7 +328,7 @@
     border:1px solid #e3dcc5; padding:11px 22px; border-radius:8px;
   }
 
-  /* ===================== SLIDE 5 — PRICE LOOKUP CALCULATOR ===================== */
+  /* ===================== SLIDE 6 — PRICE LOOKUP CALCULATOR ===================== */
   .calc-intro{font-size:25px; color:var(--steel-2); max-width:1500px; margin:-8px 0 20px; line-height:1.5;}
   .calc-tabs{display:flex; gap:14px; margin-bottom:18px;}
   .calc-tab{
@@ -370,7 +382,7 @@
   .calc-total-value{font-family:var(--serif); font-size:68px; font-weight:700; color:var(--amber);}
   .calc-note{font-size:17px; color:#8b97a4; margin-top:16px; line-height:1.5;}
 
-  /* ===================== SLIDE 6 — GPS ===================== */
+  /* ===================== SLIDE 7 — GPS ===================== */
   .gps-layout{display:grid; grid-template-columns:560px 1fr; gap:80px; align-items:center; flex:1;}
   .geofence{display:flex; justify-content:center; position:relative;}
   .geofence-svg{width:100%; max-width:560px;}
@@ -382,7 +394,8 @@
   .ring-tick{stroke:var(--line); stroke-width:1;}
   .hub{fill:var(--ink);}
   .radar-sweep{transform-origin:180px 180px; animation:radarSpin 5.5s linear infinite;}
-  .ring-label{text-anchor:middle; font-family:var(--mono); font-size:22px;}
+  .ring-label{text-anchor:middle; font-family:var(--mono); font-size:22px; opacity:0; transition:opacity .25s;}
+  .ring-label.shown{opacity:1;}
   .l1{fill:var(--amber-dark);} .l2{fill:var(--steel-2);} .l3{fill:var(--green);}
   .gps-side{display:flex; flex-direction:column; gap:44px;}
   .gps-side-block .feat-tag{margin-bottom:18px;}
@@ -403,13 +416,13 @@
   .slide.active .bar-fill.short{animation:growW 1.1s ease .3s both; --w:25%;}
   .bar-val{font-family:var(--mono); font-size:25px; font-weight:700; color:var(--ink); text-align:right;}
 
-  /* ===================== SLIDE 7 — ROADMAP ===================== */
+  /* ===================== SLIDE 1 — ROADMAP ===================== */
   .roadmap-current-note{
     display:inline-flex; align-items:center; gap:14px; font-size:28px; color:var(--steel-2); margin:-10px 0 40px;
   }
   .roadmap-current-note b{color:var(--amber-dark); font-weight:700;}
   .roadmap-current-note .pulse{width:14px;height:14px;border-radius:50%;background:var(--amber); animation:pulseRing 1.8s ease-out infinite;}
-  .roadmap{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; flex:1; align-content:start;}
+  .roadmap{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; flex:1; align-content:center;}
   .roadmap-node{display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 14px;}
   .rn-index{font-family:var(--mono); font-size:21px; font-weight:700; letter-spacing:.08em; color:var(--steel-2); margin-bottom:14px;}
   .roadmap-node.current .rn-index{color:var(--amber-dark);}
@@ -489,13 +502,13 @@
     display:flex; gap:14px; z-index:20;
   }
   .navdot{width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,.35); border:none; cursor:pointer; padding:0;}
-  #stage:not(:has(#slide-0.active)):not(:has(#slide-9.active)) .navdot{background:rgba(20,25,30,.22);}
+  #stage:not(:has(#slide-0.active)):not(:has(#slide-8.active)) .navdot{background:rgba(20,25,30,.22);}
   .navdot.active{background:var(--amber); width:32px; border-radius:8px;}
   #slideCounter{
     position:absolute; bottom:30px; right:44px; font-family:var(--mono); font-size:19px;
     color:rgba(20,25,30,.55); z-index:20; letter-spacing:.05em;
   }
-  #stage:has(#slide-0.active) #slideCounter, #stage:has(#slide-9.active) #slideCounter{color:rgba(255,255,255,.65);}
+  #stage:has(#slide-0.active) #slideCounter, #stage:has(#slide-8.active) #slideCounter{color:rgba(255,255,255,.65);}
   .navbtn{
     position:absolute; top:50%; transform:translateY(-50%); z-index:20;
     width:60px; height:60px; border-radius:50%; border:1px solid rgba(20,25,30,.15);
@@ -510,7 +523,7 @@
     background:rgba(255,255,255,.15); color:#f2f0e8; border:1px solid rgba(255,255,255,.3);
     padding:10px 18px; border-radius:20px; cursor:pointer;
   }
-  #stage:not(:has(#slide-0.active)):not(:has(#slide-9.active)) #btnFs{background:rgba(20,25,30,.06); color:var(--steel-2); border-color:var(--line);}
+  #stage:not(:has(#slide-0.active)):not(:has(#slide-8.active)) #btnFs{background:rgba(20,25,30,.06); color:var(--steel-2); border-color:var(--line);}
   #btnFs:hover{background:rgba(255,255,255,.28);}
 </style>
 </head>
@@ -532,9 +545,40 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 1 — COMPARE ============ -->
+  <!-- ============ SLIDE 1 — ROADMAP ============ -->
   <section class="slide s-pad" id="slide-1">
-    <div class="s-head"><span class="s-num">01</span><h2>Cách làm trước đây và hiện nay</h2></div>
+    <div class="s-head"><span class="s-num">01</span><h2>Tiến độ công việc</h2></div>
+    <div class="roadmap">
+      <div class="roadmap-node completed">
+        <span class="rn-index">TIẾN ĐỘ 01</span>
+        <span class="rn-status">✓ Hoàn thành</span>
+        <div class="rn-dot-row"><span class="rn-dot"></span></div>
+        <span class="rn-title">Freight-In<br>nhà máy khu vực miền Nam</span>
+      </div>
+      <div class="roadmap-node current">
+        <span class="rn-index">TIẾN ĐỘ 02</span>
+        <span class="rn-status">Đang thực hiện · 09 / 2026</span>
+        <div class="rn-dot-row"><span class="rn-dot"></span></div>
+        <span class="rn-title">Freight-In<br>Pork cả nước</span>
+      </div>
+      <div class="roadmap-node">
+        <span class="rn-index">TIẾN ĐỘ 03</span>
+        <span class="rn-status">12 / 2026</span>
+        <div class="rn-dot-row"><span class="rn-dot"></span></div>
+        <span class="rn-title">Freight-Out<br>nhà máy khu vực miền Nam</span>
+      </div>
+      <div class="roadmap-node">
+        <span class="rn-index">TIẾN ĐỘ 04</span>
+        <span class="rn-status">02 / 2027</span>
+        <div class="rn-dot-row"><span class="rn-dot"></span></div>
+        <span class="rn-title">Freight-Out Pork<br>cả nước</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 — COMPARE ============ -->
+  <section class="slide s-pad" id="slide-2">
+    <div class="s-head"><span class="s-num">02</span><h2>Cách làm trước đây và hiện nay</h2></div>
     <div class="compare-center">
       <div class="compare-wrap stagger">
         <table class="compare">
@@ -550,9 +594,9 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 2 — BENEFITS ============ -->
-  <section class="slide s-pad" id="slide-2">
-    <div class="s-head"><span class="s-num">02</span><h2>Lợi ích mang lại</h2></div>
+  <!-- ============ SLIDE 3 — BENEFITS ============ -->
+  <section class="slide s-pad" id="slide-3">
+    <div class="s-head"><span class="s-num">03</span><h2>Lợi ích mang lại</h2></div>
     <div class="benefits2-grid">
       <div class="benefit2-card stagger">
         <div class="benefit2-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 13 V24 L32 29" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -582,9 +626,9 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 3 — FEATURES ============ -->
-  <section class="slide s-pad" id="slide-3">
-    <div class="s-head"><span class="s-num">03</span><h2>Tính năng</h2></div>
+  <!-- ============ SLIDE 4 — FEATURES ============ -->
+  <section class="slide s-pad" id="slide-4">
+    <div class="s-head"><span class="s-num">04</span><h2>Tính năng</h2></div>
     <div class="arch-wrap" id="archWrap">
       <svg class="arch-svg" id="archSvg"></svg>
 
@@ -649,14 +693,17 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 4 — WORKFLOW ============ -->
-  <section class="slide s-pad" id="slide-4">
-    <div class="s-head"><span class="s-num">04</span><h2>Điều kiện kiểm tra — Quy trình xét điều kiện</h2></div>
+  <!-- ============ SLIDE 5 — WORKFLOW ============ -->
+  <section class="slide s-pad" id="slide-5">
+    <div class="s-head">
+      <span class="s-num">05</span><h2>Điều kiện kiểm tra — Quy trình xét điều kiện</h2>
+      <button id="btnOpenPriceExample" class="corner-example-btn" aria-label="Ví dụ tính giá">🧮</button>
+    </div>
     <div class="wf-wrap">
 
       <div class="wf-lane">
         <div class="wf-lane-label">
-          <span class="wf-badge">Nhánh: Điểm</span>
+          <span class="wf-badge">Cách 1: Điểm</span>
           <span class="wf-count">3 điều kiện tuần tự</span>
         </div>
         <div class="wf-track-area">
@@ -683,8 +730,8 @@
 
       <div class="wf-lane">
         <div class="wf-lane-label">
-          <span class="wf-badge">Nhánh: Chuyến + Số lượng / Trọng lượng</span>
-          <span class="wf-count">4 điều kiện tuần tự</span>
+          <span class="wf-badge">Cách 2: Chuyến + Số lượng / Trọng lượng</span>
+          <span class="wf-count">3 điều kiện tuần tự</span>
         </div>
         <div class="wf-track-area">
           <div class="wf-inset">
@@ -700,10 +747,9 @@
               <circle cx="48" cy="32" r="2.3" fill="#fff"/>
             </svg>
             <div class="wf-stops" data-lane="chuyen">
-              <div class="wf-stop"><span class="wf-stop-num">1</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện khoảng cách</span></div>
-              <div class="wf-stop"><span class="wf-stop-num">2</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện trọng tải xe</span></div>
-              <div class="wf-stop"><span class="wf-stop-num">3</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện địa điểm</span></div>
-              <div class="wf-stop"><span class="wf-stop-num">4</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện giá dầu</span></div>
+              <div class="wf-stop"><span class="wf-stop-num">1</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện trọng tải xe</span></div>
+              <div class="wf-stop"><span class="wf-stop-num">2</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện địa điểm / khoảng cách</span></div>
+              <div class="wf-stop"><span class="wf-stop-num">3</span><span class="wf-stop-dot"></span><span class="wf-stop-label">Điều kiện giá dầu</span></div>
             </div>
           </div>
         </div>
@@ -721,75 +767,78 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 5 — PRICE LOOKUP CALCULATOR ============ -->
-  <section class="slide s-pad" id="slide-5">
-    <div class="s-head"><span class="s-num">04</span><h2>Điều kiện kiểm tra — Ví dụ cách tính giá</h2></div>
-    <p class="calc-intro">Giá được tra theo <b>bảng 2 chiều</b>: chọn <b>Trọng tải xe</b> để xác định bảng giá, sau đó tra theo <b>Khoảng cách</b> (hoặc <b>Địa điểm cố định</b> nếu tuyến không tính theo Km) × <b>Giá dầu</b> hiện hành để ra giá 1 chuyến. Với nhánh Điểm, <b>Điểm cố định</b> cũng biến động theo giá dầu; <b>Điểm phát sinh</b> là mức phí cố định, không đổi theo dầu.</p>
+  <!-- ============ PRICE EXAMPLE MODAL (triggered from Workflow slide) ============ -->
+  <div id="priceExampleModal" class="demo-modal">
+    <button id="priceExampleClose" class="demo-modal-close" aria-label="Đóng">✕</button>
+    <div class="price-example-panel">
+      <div class="price-example-head"><span class="feat-tag">Ví dụ minh hoạ</span><h2>Cách tính giá</h2></div>
+      <p class="calc-intro">Giá được tra theo <b>bảng 2 chiều</b>: chọn <b>Trọng tải xe</b> để xác định bảng giá, sau đó tra theo <b>Khoảng cách</b> (hoặc <b>Địa điểm cố định</b> nếu tuyến không tính theo Km) × <b>Giá dầu</b> hiện hành để ra giá 1 chuyến. Với nhánh Điểm, <b>Điểm cố định</b> cũng biến động theo giá dầu; <b>Điểm phát sinh</b> là mức phí cố định, không đổi theo dầu.</p>
 
-    <div class="calc-tabs">
-      <button class="calc-tab active" data-calc-tab="chuyen">Chuyến / Số lượng</button>
-      <button class="calc-tab" data-calc-tab="diem">Điểm</button>
-    </div>
-
-    <!-- ===== MODE: Chuyến / Số lượng ===== -->
-    <div class="calc-mode active" data-calc-mode="chuyen">
-      <div class="lt-controls">
-        <span class="lt-control-label">Trọng tải xe</span>
-        <button class="vt-chip" data-vt="0.85">3.5 – 6.0 tấn</button>
-        <button class="vt-chip active" data-vt="1">6.0 – 8.5 tấn</button>
-        <button class="vt-chip" data-vt="1.25">8.5 – 15 tấn</button>
-        <span style="width:12px;"></span>
-        <span class="lt-control-label">Tra theo</span>
-        <button class="sub-tab active" data-sub="km">Khoảng cách (Km)</button>
-        <button class="sub-tab" data-sub="dd">Địa điểm cố định</button>
+      <div class="calc-tabs">
+        <button class="calc-tab active" data-calc-tab="chuyen">Chuyến / Số lượng</button>
+        <button class="calc-tab" data-calc-tab="diem">Điểm</button>
       </div>
-      <div class="calc-panel">
-        <div class="lt-table-wrap" id="ltTableChuyen"></div>
-        <div class="calc-result">
-          <span class="calc-result-label">Kết quả tra bảng</span>
-          <p class="calc-breadcrumb" id="ltBreadChuyen">—</p>
-          <div class="calc-total-row">
-            <span class="calc-total-label">Giá 1 chuyến</span>
-            <span class="calc-total-value" id="ltTotalChuyen">0 đ</span>
+
+      <!-- ===== MODE: Chuyến / Số lượng ===== -->
+      <div class="calc-mode active" data-calc-mode="chuyen">
+        <div class="lt-controls">
+          <span class="lt-control-label">Trọng tải xe</span>
+          <button class="vt-chip" data-vt="0.85">3.5 – 6.0 tấn</button>
+          <button class="vt-chip active" data-vt="1">6.0 – 8.5 tấn</button>
+          <button class="vt-chip" data-vt="1.25">8.5 – 15 tấn</button>
+          <span style="width:12px;"></span>
+          <span class="lt-control-label">Tra theo</span>
+          <button class="sub-tab active" data-sub="km">Khoảng cách (Km)</button>
+          <button class="sub-tab" data-sub="dd">Địa điểm cố định</button>
+        </div>
+        <div class="calc-panel">
+          <div class="lt-table-wrap" id="ltTableChuyen"></div>
+          <div class="calc-result">
+            <span class="calc-result-label">Kết quả tra bảng</span>
+            <p class="calc-breadcrumb" id="ltBreadChuyen">—</p>
+            <div class="calc-total-row">
+              <span class="calc-total-label">Giá 1 chuyến</span>
+              <span class="calc-total-value" id="ltTotalChuyen">0 đ</span>
+            </div>
+            <p class="calc-note">* Số liệu minh hoạ, mô phỏng theo cấu trúc bảng giá thực tế (xe heo mảnh, hiệu lực từ 1/4/2026) — không phải bảng giá chính thức đang áp dụng.</p>
           </div>
-          <p class="calc-note">* Số liệu minh hoạ, mô phỏng theo cấu trúc bảng giá thực tế (xe heo mảnh, hiệu lực từ 1/4/2026) — không phải bảng giá chính thức đang áp dụng.</p>
+        </div>
+      </div>
+
+      <!-- ===== MODE: Điểm ===== -->
+      <div class="calc-mode" data-calc-mode="diem">
+        <div class="lt-controls">
+          <span class="lt-control-label">Tổng số điểm chuyến</span>
+          <input type="number" id="diemTotalPoints" class="lt-number" value="20" min="0" step="1">
+          <span style="width:8px;"></span>
+          <span class="lt-control-label">Số điểm cố định</span>
+          <button class="vt-chip" data-cd="1">1</button>
+          <button class="vt-chip active" data-cd="3">3</button>
+          <button class="vt-chip" data-cd="5">5</button>
+          <span style="width:8px;"></span>
+          <span class="lt-control-label">Đơn giá điểm phát sinh</span>
+          <button class="vt-chip active" data-ps="80000">80.000 đ</button>
+          <button class="vt-chip" data-ps="100000">100.000 đ</button>
+        </div>
+        <div class="calc-panel">
+          <div class="lt-table-wrap" id="ltTableDiem"></div>
+          <div class="calc-result">
+            <span class="calc-result-label">Kết quả tra bảng</span>
+            <p class="calc-breadcrumb" id="ltBreadDiem">—</p>
+            <div class="calc-total-row">
+              <span class="calc-total-label">Tổng giá chuyến</span>
+              <span class="calc-total-value" id="ltTotalDiem">0 đ</span>
+            </div>
+            <p class="calc-note">* Điểm cố định tra theo (số điểm cố định × giá dầu); điểm phát sinh = số điểm còn lại × đơn giá đã chọn. Số liệu minh hoạ.</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- ===== MODE: Điểm ===== -->
-    <div class="calc-mode" data-calc-mode="diem">
-      <div class="lt-controls">
-        <span class="lt-control-label">Tổng số điểm chuyến</span>
-        <input type="number" id="diemTotalPoints" class="lt-number" value="20" min="0" step="1">
-        <span style="width:8px;"></span>
-        <span class="lt-control-label">Số điểm cố định</span>
-        <button class="vt-chip" data-cd="1">1</button>
-        <button class="vt-chip active" data-cd="3">3</button>
-        <button class="vt-chip" data-cd="5">5</button>
-        <span style="width:8px;"></span>
-        <span class="lt-control-label">Đơn giá điểm phát sinh</span>
-        <button class="vt-chip active" data-ps="80000">80.000 đ</button>
-        <button class="vt-chip" data-ps="100000">100.000 đ</button>
-      </div>
-      <div class="calc-panel">
-        <div class="lt-table-wrap" id="ltTableDiem"></div>
-        <div class="calc-result">
-          <span class="calc-result-label">Kết quả tra bảng</span>
-          <p class="calc-breadcrumb" id="ltBreadDiem">—</p>
-          <div class="calc-total-row">
-            <span class="calc-total-label">Tổng giá chuyến</span>
-            <span class="calc-total-value" id="ltTotalDiem">0 đ</span>
-          </div>
-          <p class="calc-note">* Điểm cố định tra theo (số điểm cố định × giá dầu); điểm phát sinh = số điểm còn lại × đơn giá đã chọn. Số liệu minh hoạ.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- ============ SLIDE 6 — GPS ============ -->
   <section class="slide s-pad" id="slide-6">
-    <div class="s-head"><span class="s-num">04</span><h2>Điều kiện kiểm tra — GPS Geofencing</h2></div>
+    <div class="s-head"><span class="s-num">05</span><h2>Điều kiện kiểm tra — GPS</h2></div>
     <div class="gps-layout">
       <div class="geofence">
         <svg viewBox="0 0 360 360" class="geofence-svg">
@@ -808,7 +857,7 @@
       </div>
       <div class="gps-side">
         <div class="gps-side-block">
-          <span class="feat-tag">Phạm vi cho phép — chạm để xem</span>
+          <span class="feat-tag">Phạm vi cho phép</span>
           <div class="range-row" data-ring="1"><span class="dot d1"></span>Trại<span class="range-val">1 km</span></div>
           <div class="range-row" data-ring="2"><span class="dot d2"></span>Kho heo / Nhà máy<span class="range-val">300 m</span></div>
           <div class="range-row" data-ring="3"><span class="dot d3"></span>Cửa hàng / Khách hàng<span class="range-val">100 m</span></div>
@@ -830,40 +879,8 @@
     </div>
   </section>
 
-  <!-- ============ SLIDE 7 — ROADMAP ============ -->
+  <!-- ============ SLIDE 7 — DEMO ============ -->
   <section class="slide s-pad" id="slide-7">
-    <div class="s-head"><span class="s-num">05</span><h2>Tiến độ triển khai</h2></div>
-    <p class="roadmap-current-note"><span class="pulse"></span>Đang thực hiện: <b>Tiến độ 2 — Freight-In Pork cả nước (09/2026)</b></p>
-    <div class="roadmap">
-      <div class="roadmap-node completed">
-        <span class="rn-index">TIẾN ĐỘ 01</span>
-        <span class="rn-status">✓ Hoàn thành</span>
-        <div class="rn-dot-row"><span class="rn-dot"></span></div>
-        <span class="rn-title">Freight-In<br>nhà máy khu vực miền Nam</span>
-      </div>
-      <div class="roadmap-node current">
-        <span class="rn-index">TIẾN ĐỘ 02</span>
-        <span class="rn-status">Đang thực hiện · 09 / 2026</span>
-        <div class="rn-dot-row"><span class="rn-dot"></span></div>
-        <span class="rn-title">Freight-In<br>Pork cả nước</span>
-      </div>
-      <div class="roadmap-node">
-        <span class="rn-index">TIẾN ĐỘ 03</span>
-        <span class="rn-status">12 / 2026</span>
-        <div class="rn-dot-row"><span class="rn-dot"></span></div>
-        <span class="rn-title">Freight-Out<br>nhà máy khu vực miền Nam</span>
-      </div>
-      <div class="roadmap-node">
-        <span class="rn-index">TIẾN ĐỘ 04</span>
-        <span class="rn-status">02 / 2027</span>
-        <div class="rn-dot-row"><span class="rn-dot"></span></div>
-        <span class="rn-title">Freight-Out Pork<br>cả nước</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SLIDE 8 — DEMO ============ -->
-  <section class="slide s-pad" id="slide-8">
     <div class="s-head"><span class="s-num">06</span><h2>Demo</h2></div>
     <div class="demo-grid">
       <div class="demo-case-card stagger" data-demo="case1">
@@ -922,8 +939,8 @@
     </div>
   </div>
 
-  <!-- ============ SLIDE 9 — THANK YOU ============ -->
-  <section class="slide" id="slide-9">
+  <!-- ============ SLIDE 8 — THANK YOU ============ -->
+  <section class="slide" id="slide-8">
     <div class="thanks-wrap">
       <svg class="hero-route" viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg">
         <path d="M -20 350 Q 120 300 160 220 T 280 150 T 420 90 T 560 40" stroke="#f2f0e8" stroke-width="2" fill="none" pathLength="1" stroke-linecap="round"/>
@@ -1025,6 +1042,20 @@
   }
   runWorkflowLane('.wf-stops[data-lane="diem"]',   'wfTruckDiem',   'wfProgDiem',   5000, 5000);
   runWorkflowLane('.wf-stops[data-lane="chuyen"]', 'wfTruckChuyen', 'wfProgChuyen', 5000, 5000);
+
+  // Price example popup — triggered from the corner button on the Workflow slide
+  (function(){
+    const modal = document.getElementById('priceExampleModal');
+    const openBtn = document.getElementById('btnOpenPriceExample');
+    const closeBtn = document.getElementById('priceExampleClose');
+    if(!modal || !openBtn || !closeBtn) return;
+    function open(){ modal.classList.add('open'); }
+    function close(){ modal.classList.remove('open'); }
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', e=>{ if(e.target === modal) close(); });
+    document.addEventListener('keydown', e=>{ if(e.key === 'Escape') close(); });
+  })();
 
   // Price lookup calculator — real-world style: (Trọng tải xe) × (Khoảng cách / Địa điểm) × (Giá dầu)
   (function(){
@@ -1188,8 +1219,11 @@
       const n = row.getAttribute('data-ring');
       document.querySelectorAll('.ring').forEach(r=> r.classList.remove('ring-active'));
       document.querySelectorAll('.range-row').forEach(r=> r.classList.remove('active'));
+      document.querySelectorAll('.ring-label').forEach(l=> l.classList.remove('shown'));
       const ring = document.querySelector('.ring-' + n);
+      const label = document.querySelector('.l' + n);
       if(ring) ring.classList.add('ring-active');
+      if(label) label.classList.add('shown');
       row.classList.add('active');
     });
   });
